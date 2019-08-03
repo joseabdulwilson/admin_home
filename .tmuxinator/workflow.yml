@@ -1,0 +1,35 @@
+# ~/.tmuxinator/workflow.yml
+name: workflow
+root: ~/MEGAsync/Container
+windows:
+  - Files:
+     panes:
+      - mc
+  - C Code:
+     pre: cd 2_code/C
+     layout: 994a,211x52,0,0{92x52,0,0,0,118x52,93,0,1}
+     panes:
+      -
+      - vim
+  - C Projects:
+     pre: cd 4_projects
+     layout: 994a,211x52,0,0{92x52,0,0,0,118x52,93,0,1}
+     panes:
+      -
+      - mc
+  - P:
+     pre:
+      - junkyard
+      - cd P
+      - clear
+     layout: 0d60,211x52,0,0{110x52,0,0[110x32,0,0,5,110x19,0,33,7],100x52,111,0,6}
+     panes:
+      - ipython
+      -
+      - vim
+  - TEX:
+     panes:
+      - vim
+  - Cal:
+     panes:
+      - calcurse
