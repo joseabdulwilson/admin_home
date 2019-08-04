@@ -1,6 +1,6 @@
 # ~/.tmuxinator/logs.yml
 name: logs
-root: ~/container/5_workflow/_logs/admin/
+root: ~/SSLABS/1_admin/5_workflow/_logs/admin/
 windows:
     - Admin BACK-UP:
        pre: clear
