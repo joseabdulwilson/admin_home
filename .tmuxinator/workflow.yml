@@ -1,6 +1,6 @@
 # ~/.tmuxinator/workflow.yml
 name: workflow
-root: ~/MEGAsync/Container
+root: ~/SSLABS/1_admin
 windows:
   - Files:
      panes:

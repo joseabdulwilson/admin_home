@@ -81,12 +81,12 @@ let g:SimpylFold_docstring_preview=1
 "//Bash~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "INSERT BASH SKELETON
 function Bt()
-  :read ~/SSLABS/1_admin/1_sinppets/B/Bt.sh
+  :read ~/SSLABS/1_admin/1_snippets/B/Bt.sh
 endfunction
 
 "INSERT BASH FUNCTION
 function Bf()
-  :read ~/SSLABS/1_admin/1_sinppets/B/Bf.sh
+  :read ~/SSLABS/1_admin/1_snippets/B/Bf.sh
 endfunction
 
 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -94,19 +94,19 @@ endfunction
 "//C~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "INSERT C SKELETON
 function Ct()
-  :read ~/SSLABS/1_admin/1_sinppets/C/Ct.sh
+  :read ~/SSLABS/1_admin/1_snippets/C/Ct.sh
 endfunction
 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 "//Python~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "INSERT MATPLOTLIB CHART
 function Pgplot()
-  :read ~/SSLABS/1_admin/1_sinppets/P/Pgplot.sh
+  :read ~/SSLABS/1_admin/1_snippets/P/Pgplot.sh
 endfunction
 
 "INSERT SHEBANG
 function Pshe()
-  :read ~/SSLABS/1_admin/1_sinppets/P/Pshe.sh
+  :read ~/SSLABS/1_admin/1_snippets/P/Pshe.sh
 endfunction
 
 
@@ -116,42 +116,42 @@ endfunction
 "//LaTeX~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "INSERT FIG
 function Tfig()
-  :read ~/SSLABS/1_admin/1_sinppets/T/Tfig.sh
+  :read ~/SSLABS/1_admin/1_snippets/T/Tfig.sh
 endfunction
 
 "INSERT WRAP FIG
 function Twfig()
-  :read ~/SSLABS/1_admin/1_sinppets/T/Twfig.sh
+  :read ~/SSLABS/1_admin/1_snippets/T/Twfig.sh
 endfunction
 
 "INSERT ITEMIZE
 function Titemize()
-  :read ~/SSLABS/1_admin/1_sinppets/T/Titemize.sh
+  :read ~/SSLABS/1_admin/1_snippets/T/Titemize.sh
 endfunction
 
 "INSERT ENUMERATE
 function Tenum()
-  :read ~/SSLABS/1_admin/1_sinppets/T/Tenum.sh
+  :read ~/SSLABS/1_admin/1_snippets/T/Tenum.sh
 endfunction
 
 "INSERT CENTER
 function Tcenter()
-  :read ~/SSLABS/1_admin/1_sinppets/T/Tcenter.sh
+  :read ~/SSLABS/1_admin/1_snippets/T/Tcenter.sh
 endfunction
 
 "TEXT TEMPLATE
 function Ttt()
-  :read ~/SSLABS/1_admin/1_sinppets/T/Ttt.sh
+  :read ~/SSLABS/1_admin/1_snippets/T/Ttt.sh
 endfunction
 
 "INSERT SUBEQUATION
 function Tsubeq()
-  :read ~/SSLABS/1_admin/1_sinppets/T/Tsubeq.sh
+  :read ~/SSLABS/1_admin/1_snippets/T/Tsubeq.sh
 endfunction
 
 "INSERT LIMIT
 function Tlim()
-  :read ~/SSLABS/1_admin/1_sinppets/T/Tlim.sh
+  :read ~/SSLABS/1_admin/1_snippets/T/Tlim.sh
 endfunction
 
 
