@@ -13,7 +13,7 @@ set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:DejaVu Sans Mono 9
+font pango:IBM Plex Mono 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -92,30 +92,45 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+## WORKSPACE CONFIGURATION||||||||||||||||||||||||||||||||||||||||||||||||||||||
+set $workspace1 "1: Ranger"
+set $workspace2 "2: Chromium"
+set $workspace3 "3: Vim"
+set $workspace4 "4: CherryTree"
+set $workspace9 "9: DL"
+set $workspace10 "10: Calcurse"
+
+
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+0 workspace $workspace10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+0 move container to workspace $workspace10
 
+# start windows on spcific workspaces
+assign [class="Chromium-browser"] $workspace2
+assign [class="Cherrytree"] $workspace4
+assign [class="xterm" instance="ranger"] $workspace1
+
+## i3 MANAGAMENT||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -152,22 +167,33 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-		font pango:DejaVu Sans Mono 10
+		font pango:IBM Plex Mono 10
 		position top
         status_command i3status
 }
 
 
 
-## Custom applications||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+## CUSTOM CONTROLS||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-# Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+# Pulse Audio controls~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Increase sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+# Decrease sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% # Mute
+# Mute
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+# Play
+bindsym XF86AudioPlay exec --no-startup-id playerctl play
+# Pause
+bindsym XF86AudioPause exec --no-startup-id playerctl pause
+# Next
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+# Previous
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 
-## Custom applications||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+## SSTARTUP LAUNCHER||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 #	1. POWER MANAGEMENT
 exec_always xfce4-power-manager
 #	2. BACKLIGHT MANAGER
@@ -178,9 +204,18 @@ exec_always synology-cloud-station-backup
 exec_always feh --bg-fill ~/Pictures/black-hole.jpg
 #	5. REDSHIFT
 exec_always $(killall -q reshift ; redshift)
+#	6. Chromium browser
+exec_always chromium-browser
+#	7. Cherrytree
+exec_always cherrytree
+
+## CUSTOM TILING||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+#Force a window always popping as floating to pop as a tile
+for_window [class="surface.py"] floating disable
+for_window [class="shutter"] floating enable
 
 ## Workspace construction|||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+exec --no-startup-id i3-msg 'workspace $workspace1; exec i3-sensible-terminal -name ranger -e ranger'
 
 
 
