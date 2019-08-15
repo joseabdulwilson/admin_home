@@ -97,7 +97,7 @@ set $workspace1 "1: Ranger"
 set $workspace2 "2: Chromium"
 set $workspace3 "3: Vim"
 set $workspace4 "4: CherryTree"
-set $workspace9 "9: DL"
+set $workspace9 "9: T0R"
 set $workspace10 "10: Calcurse"
 
 
@@ -110,7 +110,7 @@ bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
+bindsym $mod+9 workspace $workspace9
 bindsym $mod+0 workspace $workspace10
 
 # move focused container to workspace
@@ -122,13 +122,14 @@ bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # start windows on spcific workspaces
 assign [class="Chromium-browser"] $workspace2
 assign [class="Cherrytree"] $workspace4
-assign [class="xterm" instance="ranger"] $workspace1
+assign [class="Tor Browser"] $workspace9
+#assign [class="xterm" instance="ranger"] $workspace1
 
 ## i3 MANAGAMENT||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 # reload the configuration file
@@ -208,6 +209,8 @@ exec_always $(killall -q reshift ; redshift)
 exec_always chromium-browser
 #	7. Cherrytree
 exec_always cherrytree
+#	8. Tor
+exec_always ~/Documents/tor-browser_en-US/Browser/./start-tor-browser --detach
 
 ## CUSTOM TILING||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 #Force a window always popping as floating to pop as a tile
@@ -215,7 +218,7 @@ for_window [class="surface.py"] floating disable
 for_window [class="shutter"] floating enable
 
 ## Workspace construction|||||||||||||||||||||||||||||||||||||||||||||||||||||||
-exec --no-startup-id i3-msg 'workspace $workspace1; exec i3-sensible-terminal -name ranger -e ranger'
+#exec --no-startup-id i3-msg 'workspace $workspace1; exec i3-sensible-terminal -name ranger -e ranger'
 
 
 

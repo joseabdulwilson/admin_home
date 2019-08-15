@@ -1,4 +1,5 @@
-xterm*faceName: DejaVu Sans Mono Book
+xterm*faceName: IBM Plex Mono
+#xterm*faceName: DejaVu Sans Mono Book
 xterm*faceSize: 12
 !xterm*transparent: true
 

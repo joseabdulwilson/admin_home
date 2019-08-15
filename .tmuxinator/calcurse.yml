@@ -1,0 +1,10 @@
+# ~/.tmuxinator/calcurse.yml
+name: workflow
+root: ~
+windows:
+  - C Code:
+     layout: a26a,191x45,0,0{95x45,0,0,0,95x45,96,0[95x22,96,0,1,95x22,96,23,2]}
+     panes:
+      - calcurse -D ~/SSLABS/1_admin/5_workflow/exports/home.bak/.calcurse
+      - clear; cmus
+      - clear; nmtui
