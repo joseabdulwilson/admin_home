@@ -3,6 +3,48 @@ xterm*faceName: DejaVu Sans Mono Book
 xterm*faceSize: 13
 !xterm*transparent: true
 
+!~~~~~RED?
+! *** Colors ***
+!xterm*background:   #000000
+!xterm*foreground:   #d64937
+!xterm*cursorColor:  #FF0000
+!XTerm*pointerColorBackground: black
+!XTerm*cursorBlink: true
+
+! black
+!xterm*color0:       #ababab
+!xterm*color8:       #303132
+
+! red
+!xterm*color1:       #909093
+!xterm*color9:       #353535
+
+! green
+!xterm*color2:       #7e7e7e
+!xterm*color10:      #3a3b3c
+
+! yellow
+!xterm*color3:       #777777
+!xterm*color11:      #4a4b4c
+
+! blue
+!xterm*color4:       #6a686c
+!xterm*color12:      #535455
+
+! magenta
+!xterm*color5:       #555457
+!xterm*color13:      #696969
+
+! cyan
+!xterm*color6:       #4a4b4c
+!xterm*color14:      #7c7c7e
+
+! white
+!xterm*color7:       #292a2b
+!xterm*color15:      #999999
+
+
+!~~~~~~~OLD
 ! special
 xterm*.foreground:   #c5c8c6
 xterm*.background:   #1d1f21
