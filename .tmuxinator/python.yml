@@ -1,0 +1,13 @@
+# ~/.tmuxinator/python.yml
+name: python 
+root: ~/SSLABS/1_admin/2_code/P
+windows:
+  - P:
+     pre:
+      - junkyard
+      - clear
+     layout: 0d60,211x52,0,0{110x52,0,0[110x32,0,0,5,110x19,0,33,7],100x52,111,0,6}
+     panes:
+      - ipython
+      -
+      - vim

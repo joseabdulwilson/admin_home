@@ -59,6 +59,9 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+"//split navigations CTRL+H | CTRL+J | CTRL+K | CTRL+L |||||||||||||||||||||||||
+nnoremap <M-]> :bn <Enter>
+nnoremap <M-[> :bp <Enter>
 
 "//COLOR SCHEME ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 set background=dark 
