@@ -206,7 +206,7 @@ exec_always xfpm-power-backlight-helper
 #	3. SYNOLOGY CLOUD STATION BACKUP
 exec_always synology-cloud-station-backup
 #	4. CUSTOM WALL PAPER
-exec_always feh --bg-fill ~/Pictures/night-time2.jpg
+exec_always feh --bg-fill ~/Pictures/lapland.jpg
 #	5. REDSHIFT
 exec_always $(killall -q reshift ; redshift)
 #	6. Chromium browser
