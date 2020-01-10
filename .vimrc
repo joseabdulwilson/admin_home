@@ -119,6 +119,10 @@ function Pshe()
   :read ~/SSLABS/1_admin/1_snippets/P/Pshe.sh
 endfunction
 
+"INSERT PYTHON SKELETON 
+function Pt()
+  :read ~/SSLABS/1_admin/1_snippets/P/Pt.sh
+endfunction
 
 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
